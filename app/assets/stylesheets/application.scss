@@ -22,3 +22,14 @@
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+a:link {color:lightskyblue; text-decoration:none }
+a:visited { color:dodgerblue; text-decoration:none }
+a:hover { color:red; text-decoration:none }
+a:active { color:white; text-decoration:none }
+
+header {
+  height: auto;
+  width: 100%;
+  background-color: whitesmoke;
+}

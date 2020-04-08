@@ -1,2 +1,7 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<div style="width:300px; height:100%; overflow:scroll;">
+  <% @categories.each do |category|%>
+    <%= link_to category_path(category) do%>
+      <%= category.name %>
+    <% end %>
+  <% end %>
+</div>
