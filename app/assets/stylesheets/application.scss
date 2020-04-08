@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
