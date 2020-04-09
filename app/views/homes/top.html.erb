@@ -10,6 +10,7 @@
 </header>
 
 <div class="container">
+  <p id = "notice"><%= notice %></p>
   <% @boards.each do |board|%>
     <div class="top-boards">
       <%= link_to board_path(board.id) do%>
