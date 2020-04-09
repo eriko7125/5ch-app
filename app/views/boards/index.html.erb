@@ -1,3 +1,46 @@
-<div class="row">
-  
+<nav class="navbar">
+  <ul class="navbar nav">
+    <li class="mr-3"><%= link_to "掲示板一覧", categories_path %></li>
+    <li><%= link_to "ログイン", new_user_session_path %></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="text-center">
+    <%= link_to image_tag("logo.png"), root_path %>
+  </div>
+
+  <div class="board-index mt-5">
+    <div style="width:100%; height:300px; overflow:scroll;">
+      <p><% @boards.each do |board|%>
+        <%= link_to board_path(board.id) do%>
+          <br><%= board.id %>：<%= board.title %>
+        <% end %>
+      <% end %></p>
+    </div>
+  </div>
+
+  <div class="board-form mt-5">
+    <%= form_for @board, url: boards_path do |f| %>
+      <p>
+        <%= f.label :title, "スレタイ" %>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :editor, "名前"%>
+        <%= f.text_field :editor %>
+      </p>
+      <p>
+        <%= f.label :category, "カテゴリ" %>
+        <%= collection_check_boxes(:category, :category_ids, Category.all, :id, :name) do |category| %> 
+          <%= category.label do %>
+            <%= category.check_box %>
+            <%= category.text %>
+          <% end %>
+        <% end %>
+      </p>
+
+      <%= f.submit "作成する", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

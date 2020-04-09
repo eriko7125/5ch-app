@@ -1,7 +1,27 @@
-<div style="width:300px; height:100%; overflow:scroll;">
-  <% @categories.each do |category|%>
-    <%= link_to category_path(category) do%>
-      <%= category.name %>
-    <% end %>
-  <% end %>
+<div class="container">
+  <div class="d-flex mt-5">
+    <div style="width:200px; height:100vh; overflow:scroll;">
+      <% @categories.each do |category|%>
+        <%= link_to boards_path(@board) do%>
+          <p><%= category.name %></p>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="about ml-5">
+      <div class="text-center">
+        <p><%= image_tag "logo.png" %></p>
+        <p><h5><small>「ハッキング」から「今晩のおかず」までを手広くカバーする巨大掲示板群</small>
+        <br>『５ちゃんねる』<small>のクローンサイトを作成中！</small></h5></p>
+        <br>
+        <%= form_for @category, url: categories_path do |f| %>
+          <p>
+            <%= f.label :name, "カテゴリ名" %>
+            <%= f.text_field :name %>
+          </p>
+          <%= f.submit "作成する", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

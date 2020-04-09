@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create! (
+  [
+    {
+      email: "a@gmail.com",
+      password: "654321",
+    }
+  ]
+)
+
+Category.create! (
+  [
+    {
+      name: "ニュース速報",
+    }
+  ]
+)
+
+Board.create! (
+  [
+    {
+      title: "ニュースだよ！",
+      editor: "名無し"
+    }
+  ]
+)
+
+CategoryBoard.create! (
+  [
+    {
+      category_id: "1",
+      board_id: "1"
+    }
+  ]
+)
