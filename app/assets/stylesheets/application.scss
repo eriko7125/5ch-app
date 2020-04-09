@@ -22,3 +22,56 @@
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+a:link {color:lightskyblue; text-decoration:none }
+a:visited { color:dodgerblue; text-decoration:none }
+a:hover { color:red; text-decoration:none }
+a:active { color:white; text-decoration:none }
+
+header {
+  height: auto;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.top-boards {
+  margin-top: 10px;
+  padding-left: 10px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}
+
+.board-index {
+  padding-left: 10px;
+  background-color: lightcyan;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.board-form {
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.board-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.comment-index {
+  width: 50%;
+  margin-top: 10px;
+  padding-left: 10px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}
+
+.comment-form {
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
