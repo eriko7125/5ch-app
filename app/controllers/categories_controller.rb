@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path, notice: "カテゴリを作成しました"
+      redirect_to categories_path, notice: "【カテゴリを作成しました】"
     else
       @categories = Category.all
       render action: :index

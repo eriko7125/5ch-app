@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     comment.user_id = current_user.id
     comment.board_id = board.id
     if comment.save
-      redirect_to board_path(board.id), notice: "レスを投稿しました"
+      redirect_to board_path(board.id), notice: "【コメントを投稿しました】"
     else
       categories = Category.all
       redirect_back(fallback_location: root_path)
